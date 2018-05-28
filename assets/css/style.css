@@ -27,14 +27,14 @@ nav h1 {
     padding-bottom:60vh;
 }
 h2 {
-    height: 8%;
-    margin-top: 2%;
-    font-size: 5%;
+    height: 8vh;
+    padding-top: 2vh;
+
     text-align: center;
 }
 input{
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: aliceblue;
     font-size: 1.5rem;
     border-radius: 25px ;
@@ -42,7 +42,6 @@ input{
 }
 input[type="text"]{
     max-width: 98%;
-    height: 9%;
     text-align: center;
 }
 nav input{
@@ -57,7 +56,7 @@ input:hover{
     background-color: #eeeeaa;
 }
 
-#map{ width:100%; height: 70%; }
+#map{ width:100%; height: 70vh; }
 
 #terug{
     background-color: #1F2021;
