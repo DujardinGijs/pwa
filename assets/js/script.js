@@ -161,9 +161,9 @@ function homescreen() {
     e.preventDefault();
     deferredPrompt = e;
     $("#off").show();
-    $("#off").addEventListener('click', (e) => {
+    $("#off").on('click', (e) => {
         // hide our user interface that shows our A2HS button
-        $("#off").hide()
+        $("#off").hide();
         // Show the prompt
         deferredPrompt.prompt();
         // Wait for the user to respond to the prompt
