@@ -1,24 +1,26 @@
-
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-right: auto;
     margin-left: auto;
     font-size: 3.5vh;
-    background-color: #ededed;
     color: rgb(38,38,38);
     font-family: Times New Roman, Helvetica, Arial, sans-serif;
     text-align: center;
     box-shadow: 5px 5px 15px #666;
 
 }
+nav{
+    height: 100vh;
+    background: url("../media/background.gif") center no-repeat;
+    background-size: cover;
+}
 nav h1 {
     font-size: 6vh ;
-    background-color: #1F2021;
-    color: lightblue;
-    height: 20vh;
-    padding-top: 10vh;
-    box-shadow: 5px 5px 15px #666;
+    color: black;
+    font-weight: bold;
+    padding-top: 6vh;
+    padding-bottom: 55vh;
 }
 h2 {
     height: 8vh;
@@ -30,7 +32,7 @@ input{
     width: 100%;
     height: 10vh;
     background-color: aliceblue;
-    font-size: 4vh;
+    font-size: 2rem;
     border-radius: 25px ;
 
 }
@@ -41,9 +43,9 @@ input[type="text"]{
 }
 nav input{
     width: 98vw;
-    height: 30vh;
-
-    margin-top: 4vh;
+    height: 8vh;
+    opacity: 0.8;
+    margin-top: 2vh;
     box-shadow: 5px 5px 15px #666;
 
 }
@@ -61,6 +63,14 @@ input:hover{
     position: absolute;
     background-color: #BBBBBB;
     width: 100vw;
+    font-size: 1.5rem;
+}
+#home{
+    position: absolute;
+    bottom: 0;
+    line-height: 160%;
+    width: 100vw;
+    background-color: #BBBBBB;
     font-size: 1.5rem;
 }
 
