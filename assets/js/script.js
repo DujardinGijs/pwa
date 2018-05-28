@@ -160,8 +160,8 @@ let deferredPrompt;
 function homescreen(e) {
     e.preventDefault();
     deferredPrompt = e;
-    $("#off").show();
-    $("#off").on('click', (e) => {
+    $("#home").show();
+    $("#home").on('click', (e) => {
         // hide our user interface that shows our A2HS button
         $("#off").hide();
         // Show the prompt
