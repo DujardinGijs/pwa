@@ -67,7 +67,7 @@ function addMarker(lat,lon,naam) {
 
     const icon = {
 
-        url: "http://clipartist.net/social/clipartist.net/A/auto_car_black_white_line_art-555px.png", // url
+        url: "./assets/media/marker.png", // url
         scaledSize: new google.maps.Size(100, 40)
     };
 
