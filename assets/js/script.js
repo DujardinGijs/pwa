@@ -157,7 +157,7 @@ function verwijder() {
     };
 }
 let deferredPrompt;
-function homescreen() {
+function homescreen(e) {
     e.preventDefault();
     deferredPrompt = e;
     $("#off").show();
