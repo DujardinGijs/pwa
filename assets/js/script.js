@@ -129,7 +129,7 @@ function nieuwPunt(e) {
 }
 function slaOp(e) {
     e.preventDefault();
-    e.scrollIntoView();
+    e.target.closest('form').scrollIntoView();
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
         var transaction = db.transaction("cars", "readwrite");
