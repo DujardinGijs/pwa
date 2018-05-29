@@ -170,16 +170,20 @@ function homescreen(e) {
         // Wait for the user to respond to the prompt
     });
 }
+function changeheight() {
+    $("nav").css("background-color","red");
+}
 function init() {
     $("#off").hide();
-   // $("#home").hide();
+    $("#home").hide();
     //serviceworker();
     initDb();
-    changeheight();
+    //changeheight();
     terug();
     window.addEventListener('offline', handleConnectionChange);
     window.addEventListener('online', handleConnectionChange);
     window.addEventListener('beforeinstallprompt',homescreen);
+    $(window).on('resize', changeheight);
     $("#nieuw").on('click', selecteer);
     $('#selecteer').on('submit', nieuwPunt);
     $('#nieuwPunt').on('submit', slaOp);
