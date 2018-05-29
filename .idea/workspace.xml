@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43e61a6a-70fe-4ede-8354-5b34f49502dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/map.js" afterPath="$PROJECT_DIR$/assets/js/map.js" />
-    </list>
+    <list default="true" id="43e61a6a-70fe-4ede-8354-5b34f49502dd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +94,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-7" />
     <option name="width" value="1084" />
     <option name="height" value="1047" />
@@ -203,15 +201,15 @@
       <workItem from="1527417120715" duration="355000" />
       <workItem from="1527423830181" duration="39000" />
       <workItem from="1527544093582" duration="8341000" />
-      <workItem from="1527599292258" duration="11590000" />
+      <workItem from="1527599292258" duration="11678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20325000" />
+    <option name="totallyTimeSpent" value="20413000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1084" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1084" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22378278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
