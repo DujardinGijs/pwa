@@ -64,9 +64,7 @@ function markerLocation(){
 }
 
 function addMarker(lat,lon,naam) {
-
     const icon = {
-
         url: "./assets/media/marker.png", // url
         scaledSize: new google.maps.Size(100, 40)
     };
@@ -75,7 +73,8 @@ function addMarker(lat,lon,naam) {
         position: {lat: lat, lng: lon},
         map: map,
         label: naam,
-        icon: icon
+        icon: icon,
+        opacity: 0.7
     })
 }
 
