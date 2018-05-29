@@ -170,7 +170,7 @@ function homescreen(e) {
         // Wait for the user to respond to the prompt
     });
 }
-function init() {
+function init(e) {
     $("#off").hide();
     $("#home").hide();
     //serviceworker();
@@ -186,7 +186,7 @@ function init() {
     $("#terug").on('click', terug);
     $("#autos").on('submit', selecteer);
     $("#verwijder").on('click', verwijder);
-    window.scrollTo(0, 1);
+    e.requestFullscreen();
 }
 init();
 
