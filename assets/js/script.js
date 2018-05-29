@@ -129,8 +129,6 @@ function nieuwPunt(e) {
 }
 function slaOp(e) {
     e.preventDefault();
-    e.target.closest('form').scrollIntoView();
-    window.scrollTo(0,0);
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
         var transaction = db.transaction("cars", "readwrite");
@@ -167,6 +165,10 @@ function homescreen(e) {
         deferredPrompt.prompt();
     });
 }
+function show(e) {
+    e.target.closest('form').scrollIntoView();
+    window.scrollTo(0,0);
+}
 function init(e) {
     $("#off").hide();
     $("#home").hide();
@@ -178,6 +180,7 @@ function init(e) {
     window.addEventListener('beforeinstallprompt',homescreen);
     $("#nieuw").on('click', selecteer);
     $('#selecteer').on('submit', nieuwPunt);
+    $('#naam').on('click',show);
     $('#nieuwPunt').on('submit', slaOp);
     $("#zoek").on('click', zoek);
     $("#terug").on('click', terug);
