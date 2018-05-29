@@ -173,7 +173,7 @@ function show(e) {
 function init(e) {
     $("#off").hide();
     $("#home").hide();
-    //serviceworker();
+    serviceworker();
     initDb();
     terug();
     window.addEventListener('offline', handleConnectionChange);
