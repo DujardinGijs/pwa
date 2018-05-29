@@ -9,11 +9,10 @@ body{
     font-family: Times New Roman, Helvetica, Arial, sans-serif;
     text-align: center;
     box-shadow: 5px 5px 15px #666;
-
 }
 nav{
     height: 100%;
-    <!--background: url("../media/background.gif") center no-repeat;-->
+    background: url("../media/background.gif") center no-repeat;
     background-size: cover;
 }
 nav h1 {
@@ -21,11 +20,11 @@ nav h1 {
     color: black;
     font-weight: bold;
     padding-top: 6%;
-    padding-bottom:60%;
+    padding-bottom:60vh;
 }
 h2 {
-    height: 8%;
-    padding-top: 2%;
+    height: 8vh;
+    padding-top: 2vh;
 
     text-align: center;
 }
@@ -51,6 +50,10 @@ nav input{
 }
 input:hover{
     background-color: #eeeeaa;
+}
+
+main{
+    height: 100%;
 }
 
 #map{ width:100%; height: 70vh; }
