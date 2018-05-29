@@ -171,7 +171,8 @@ function homescreen(e) {
     });
 }
 function changeheight() {
-    $("nav").css("background-color","red");
+    let h = window.innerHeight;
+
 }
 function init() {
     $("#off").hide();
@@ -183,7 +184,7 @@ function init() {
     window.addEventListener('offline', handleConnectionChange);
     window.addEventListener('online', handleConnectionChange);
     window.addEventListener('beforeinstallprompt',homescreen);
-    $(window).on('resize', changeheight);
+    window.addEventListener('resize', changeheight);
     $("#nieuw").on('click', selecteer);
     $('#selecteer').on('submit', nieuwPunt);
     $('#nieuwPunt').on('submit', slaOp);
