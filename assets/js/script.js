@@ -172,7 +172,7 @@ function homescreen(e) {
 }
 function init() {
     $("#off").hide();
-    $("#home").hide();
+   // $("#home").hide();
     //serviceworker();
     initDb();
     changeheight();
