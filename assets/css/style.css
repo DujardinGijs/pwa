@@ -11,7 +11,7 @@ body{
 }
 nav{
     height: 100%;
-    background: url("../media/background.gif") center no-repeat;
+    background: url("../media/background.webp") center no-repeat;
     background-size: cover;
 }
 nav h1 {
