@@ -51,6 +51,7 @@ input:hover{
 
 main{
     height: 100%;
+    background-color: #ededed;
 }
 
 #map{ width:100%; height: 70vh; }

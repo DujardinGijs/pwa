@@ -186,7 +186,6 @@ function init(e) {
     $("#terug").on('click', terug);
     $("#autos").on('submit', selecteer);
     $("#verwijder").on('click', verwijder);
-    $("body").requestFullscreen();
 }
 init();
 
