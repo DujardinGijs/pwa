@@ -171,8 +171,7 @@ function homescreen(e) {
     });
 }
 function changeheight(e) {
-    let h = window.innerHeight
-        || document.documentElement.clientHeight;
+    let h = window.innerHeight;
     $('body').height(h);
 }
 function init() {
