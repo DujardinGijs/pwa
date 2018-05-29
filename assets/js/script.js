@@ -130,6 +130,7 @@ function nieuwPunt(e) {
 function slaOp(e) {
     e.preventDefault();
     e.target.closest('form').scrollIntoView();
+    window.scrollTo(0,0);
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
         var transaction = db.transaction("cars", "readwrite");
@@ -153,7 +154,7 @@ function verwijder() {
         zoek()
     };
     request.onerror = function (e) {
-        console.log("failllllll " + e);
+        console.log("fail " + e);
     };
 }
 let deferredPrompt;
@@ -161,13 +162,9 @@ function homescreen(e) {
     e.preventDefault();
     deferredPrompt = e;
     $("#home").show();
-
     $("#home").on('click', (e) => {
-        // hide our user interface that shows our A2HS button
         $("#off").hide();
-        // Show the prompt
         deferredPrompt.prompt();
-        // Wait for the user to respond to the prompt
     });
 }
 function init(e) {
