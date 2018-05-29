@@ -172,7 +172,7 @@ function show(e) {
 }
 function init(e) {
     $("#off").hide();
-    //$("#home").hide();
+    $("#home").hide();
     serviceworker();
     initDb();
     terug();
