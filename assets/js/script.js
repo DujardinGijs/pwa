@@ -166,6 +166,7 @@ function homescreen(e) {
     });
 }
 function show(e) {
+    e.preventDefault();
     e.target.closest('form').scrollIntoView();
     window.scrollTo(0,0);
 }
