@@ -70,7 +70,6 @@ input:hover{
 }
 #home{
     position: absolute;
-    bottom: 0;
     line-height: 160%;
     width: 100vw;
     background-color: #BBBBBB;
