@@ -170,6 +170,11 @@ function homescreen(e) {
         // Wait for the user to respond to the prompt
     });
 }
+function changeheight(e) {
+    let h = window.innerHeight
+        || document.documentElement.clientHeight;
+    $('body').height(h);
+}
 function init() {
     $("#off").hide();
     $("#home").hide();
@@ -179,6 +184,7 @@ function init() {
     window.addEventListener('offline', handleConnectionChange);
     window.addEventListener('online', handleConnectionChange);
     window.addEventListener('beforeinstallprompt',homescreen);
+    window.addEventListener('resize', changeheight);
     $("#nieuw").on('click', selecteer);
     $('#selecteer').on('submit', nieuwPunt);
     $('#nieuwPunt').on('submit', slaOp);
@@ -187,7 +193,6 @@ function init() {
     $("#autos").on('submit', selecteer);
     $("#verwijder").on('click', verwijder)
 }
-
 init();
 
 
