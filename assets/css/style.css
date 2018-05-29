@@ -16,7 +16,7 @@ body{
 }
 nav{
     height: 100vh;
-    background: url("../media/background.gif") center no-repeat;
+    <!--background: url("../media/background.gif") center no-repeat;-->
     background-size: cover;
 }
 nav h1 {
