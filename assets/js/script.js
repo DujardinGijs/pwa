@@ -180,6 +180,7 @@ function init() {
     $("#home").hide();
     serviceworker();
     initDb();
+    changeheight();
     terug();
     window.addEventListener('offline', handleConnectionChange);
     window.addEventListener('online', handleConnectionChange);
