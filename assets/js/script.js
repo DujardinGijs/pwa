@@ -177,7 +177,7 @@ function changeheight(e) {
 function init() {
     $("#off").hide();
     $("#home").hide();
-    serviceworker();
+    //serviceworker();
     initDb();
     changeheight();
     terug();
