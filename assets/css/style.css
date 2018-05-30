@@ -7,7 +7,6 @@ body{
     color: rgb(38,38,38);
     font-family: Times New Roman, Helvetica, Arial, sans-serif;
     text-align: center;
-
 }
 nav{
     height: 100%;
@@ -54,9 +53,10 @@ main{
     height: 100%;
     background-color: #ededed;
 }
-
-#map{ width:100%; height: 70%; }
-
+#map{
+    width:100%;
+    height: 70%;
+}
 #terug{
     background-color: #1F2021;
     color: #add8e6;
@@ -74,6 +74,3 @@ main{
     background-color: #BBBBBB;
     font-size: 1rem;
 }
-
-
-

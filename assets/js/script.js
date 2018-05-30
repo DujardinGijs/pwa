@@ -2,7 +2,7 @@ let punt = {naam: "", lat: 0.0, lon: 0.0};
 const indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
 let db;
 let online = true;
-
+let deferredPrompt;
 function initDb() {
     const request = indexedDB.open("carRepo", 1);
     request.onsuccess = function () {
@@ -131,9 +131,9 @@ function slaOp(e) {
     e.preventDefault();
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
-        var transaction = db.transaction("cars", "readwrite");
-        var objectStore = transaction.objectStore("cars");
-        var request = objectStore.add(punt);
+        let transaction = db.transaction("cars", "readwrite");
+        let objectStore = transaction.objectStore("cars");
+        let request = objectStore.add(punt);
         request.onsuccess = function (evt) {
             zoek()
         };
@@ -143,9 +143,9 @@ function slaOp(e) {
     }
 }
 function verwijder() {
-    var transaction = db.transaction("cars", "readwrite");
-    var objectStore = transaction.objectStore("cars");
-    var request = objectStore.clear();
+    let transaction = db.transaction("cars", "readwrite");
+    let objectStore = transaction.objectStore("cars");
+    let request = objectStore.clear();
     console.log("dv");
     request.onsuccess = function (evt) {
         console.log("d " + evt);
@@ -155,7 +155,6 @@ function verwijder() {
         console.log("fail " + e);
     };
 }
-let deferredPrompt;
 function homescreen(e) {
     e.preventDefault();
     deferredPrompt = e;
