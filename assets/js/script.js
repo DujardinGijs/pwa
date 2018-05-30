@@ -56,7 +56,7 @@ function terug() {
     $("main").hide();
 }
 function puntenLaden() {
-    let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
+    let transaction = db.transaction(["cars"], "readwrite");
     let objectStore = transaction.objectStore("cars");
     let request = objectStore.openCursor();
     request.onsuccess = function (evt) {
@@ -132,7 +132,7 @@ function slaOp(e) {
     e.preventDefault();
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
-        let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
+        let transaction = db.transaction(["cars"], "readwrite");
         let objectStore = transaction.objectStore("cars");
         let request = objectStore.add(punt);
         request.onsuccess = function (evt) {
@@ -144,7 +144,7 @@ function slaOp(e) {
     }
 }
 function verwijder() {
-    let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
+    let transaction = db.transaction(["cars"], "readwrite");
     let objectStore = transaction.objectStore("cars");
     let request = objectStore.clear();
     console.log("dv");
