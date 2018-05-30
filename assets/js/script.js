@@ -165,8 +165,7 @@ function homescreen(e) {
         deferredPrompt.prompt();
     });
 }
-function show(e) {
-    e.preventDefault();
+function scroll(e) {
     e.target.closest('form').scrollIntoView();
     window.scrollTo(0,0);
 }
@@ -181,7 +180,7 @@ function init(e) {
     window.addEventListener('beforeinstallprompt',homescreen);
     $("#nieuw").on('click', selecteer);
     $('#selecteer').on('submit', nieuwPunt);
-    $('#naam').on('click',show);
+    $('#naam').on('click',scroll);
     $('#nieuwPunt').on('submit', slaOp);
     $("#zoek").on('click', zoek);
     $("#terug").on('click', terug);
