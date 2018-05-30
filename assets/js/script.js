@@ -1,10 +1,11 @@
 let punt = {naam: "", lat: 0.0, lon: 0.0};
-const indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
+window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || {READ_WRITE: "readwrite"};
 let db;
 let online = true;
 let deferredPrompt;
 function initDb() {
-    const request = indexedDB.open("carRepo", 1);
+    const request = window.indexedDB.open("carRepo", 1);
     request.onsuccess = function () {
         db = request.result;
     };
@@ -55,7 +56,7 @@ function terug() {
     $("main").hide();
 }
 function puntenLaden() {
-    let transaction = db.transaction("cars", "readonly");
+    let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
     let objectStore = transaction.objectStore("cars");
     let request = objectStore.openCursor();
     request.onsuccess = function (evt) {
@@ -131,7 +132,7 @@ function slaOp(e) {
     e.preventDefault();
     if ($('#naam').val() !== "") {
         punt.naam = $('#naam').val();
-        let transaction = db.transaction("cars", "readwrite");
+        let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
         let objectStore = transaction.objectStore("cars");
         let request = objectStore.add(punt);
         request.onsuccess = function (evt) {
@@ -143,7 +144,7 @@ function slaOp(e) {
     }
 }
 function verwijder() {
-    let transaction = db.transaction("cars", "readwrite");
+    let transaction = db.transaction(["cars"], IDBTransaction.READ_WRITE);
     let objectStore = transaction.objectStore("cars");
     let request = objectStore.clear();
     console.log("dv");
